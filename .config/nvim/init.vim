@@ -21,6 +21,7 @@ call plug#end()
 
 set guicursor=
 set number
+set ts=4 sw=4
 
 set background=dark
 colorscheme material

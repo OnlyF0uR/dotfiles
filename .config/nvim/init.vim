@@ -1,5 +1,3 @@
-" ~/.local/share/nvim/site/autoload
-" call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 call plug#begin('~/.config/nvim/autoload/')
 
 " nvim-cmp
@@ -17,14 +15,16 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " solidity
 Plug 'tomlion/vim-solidity'
 
+" theme
+Plug 'mhartington/oceanic-next'
+
 call plug#end()
 
 set guicursor=
 set number
 set ts=4 sw=4
 
-set background=dark
-colorscheme material
+set clipboard+=unnamedplus
 
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -37,3 +37,11 @@ endif
 " nvim-cmp config
 set completeopt=menu,menuone,noselect
 lua require('autocmp')
+
+" Theme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+syntax on
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext

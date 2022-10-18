@@ -9,8 +9,8 @@ require "user.treesitter"
 require "user.cmp"
 require "user.lsp"
 
+require "user.telescope"
 require "user.autopairs"
+require "user.lualine"
 
-if vim.g.os.sysname ~= "Windows_NT" then
-    require "user.colorscheme"
-end
+require "user.theme"

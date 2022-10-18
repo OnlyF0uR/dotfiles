@@ -5,7 +5,11 @@ local opts = {
     number = true,
     relativenumber = true,
     fileencoding = "utf-8",
-    completeopt = { "menuone", "noselect" } -- cmp options
+	tabstop = 4,
+	shiftwidth = 4,
+	expandtab = true,
+	softtabstop = 4,
+    completeopt = { "menu", "menuone", "noselect" } -- cmp options
 }
 
 for k, v in pairs(opts) do
@@ -14,5 +18,4 @@ end
 
 vim.cmd [[
     set mouse=
-    set ts=4 sw=4
 ]]

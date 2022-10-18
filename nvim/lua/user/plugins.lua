@@ -32,13 +32,22 @@ end
 return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Package manager
 
-    -- Only load these plugins for non-windows systems
-    if vim.g.os.sysname ~= "Window_NT" then
-        use "navarasu/onedark.nvim" -- Colourscheme
-    end
+    use "nvim-telescope/telescope.nvim" 
 
 	use "windwp/nvim-autopairs" -- Autopairs, hooked into cmp 
-	use "leafOfTree/vim-svelte-plugin" -- Syntax highlighting for svelte
+	use "leafOfTree/vim-svelte-plugin" -- Syntax highlighting for svelte 
+
+	use { "catppuccin/nvim", as = "catppuccin",
+		config = function()
+			vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+			require("catppuccin").setup()
+			vim.api.nvim_command "colorscheme catppuccin"
+		end
+	}
+	
+	use { "nvim-lualine/lualine.nvim",
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 
     -- CMP Plugins
     use "hrsh7th/nvim-cmp"

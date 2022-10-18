@@ -5,7 +5,7 @@ local opts = {
     number = true,
     relativenumber = true,
     fileencoding = "utf-8",
-    completeopt = { "menu", "menuone", "noselect" } -- cmp options
+    completeopt = { "menuone", "noselect" } -- cmp options
 }
 
 for k, v in pairs(opts) do

@@ -37,7 +37,8 @@ return packer.startup(function(use)
         use "navarasu/onedark.nvim" -- Colourscheme
     end
 
-	use "windwp/nvim-autopairs" -- Autopairs, hooked into cmp
+	use "windwp/nvim-autopairs" -- Autopairs, hooked into cmp 
+	use "leafOfTree/vim-svelte-plugin" -- Syntax highlighting for svelte
 
     -- CMP Plugins
     use "hrsh7th/nvim-cmp"

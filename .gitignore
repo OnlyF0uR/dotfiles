@@ -1,0 +1,4 @@
+nvim/plugin/
+win/.config/scoop/
+
+linux/.ghc/ghci_history

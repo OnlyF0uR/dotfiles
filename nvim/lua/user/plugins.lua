@@ -32,41 +32,43 @@ end
 return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Package manager
 
-	-- Only load these plugins for non-windows systems
+    -- Only load these plugins for non-windows systems
     if vim.g.os.sysname ~= "Window_NT" then
         use "navarasu/onedark.nvim" -- Colourscheme
-
-		-- CMP Plugins
-        use "hrsh7th/nvim-cmp"
-        use "hrsh7th/cmp-buffer"
-        use "hrsh7th/cmp-path"
-        use "hrsh7th/cmp-cmdline"
-        use "saadparwaiz1/cmp_luasnip"
-        use "hrsh7th/cmp-nvim-lsp"
-        use "hrsh7th/cmp-nvim-lua"
-
-        -- Snippets
-        use "L3MON4D3/LuaSnip"
-
-        -- LSP
-		use "williamboman/nvim-lsp-installer"
-        use "neovim/nvim-lspconfig"
     end
 
+	use "windwp/nvim-autopairs" -- Autopairs, hooked into cmp
+
+    -- CMP Plugins
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "saadparwaiz1/cmp_luasnip"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-nvim-lua"
+
+    -- Snippets
+    use "L3MON4D3/LuaSnip"
+
+    -- LSP
+    use "williamboman/nvim-lsp-installer"
+    use "neovim/nvim-lspconfig"
+
     -- Git
-	use {
-		"lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" },
-		config = function() require("gitsigns").setup() end
-	}
+    use {
+        "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" },
+        config = function() require("gitsigns").setup() end
+    }
 
-	-- Filetree
-	use {
-		"nvim-tree/nvim-tree.lua",
-		requires = { "nvim-tree/nvim-web-devicons" }
-	}
+    -- Filetree
+    use {
+        "nvim-tree/nvim-tree.lua",
+        requires = { "nvim-tree/nvim-web-devicons" }
+    }
 
-	-- Treesitter
-	use "nvim-treesitter/nvim-treesitter"
+    -- Treesitter
+    use "nvim-treesitter/nvim-treesitter"
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

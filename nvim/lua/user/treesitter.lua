@@ -33,5 +33,8 @@ configs.setup({
 	indent = {
 		enable = true,
 		disable = {}
-	}	
+	},
+	autopairs = {
+		enable = true,
+	}
 })

@@ -1,16 +1,15 @@
-function mpk(mode, lhs, rhs, opts)
-	local options = { noremap = true }
+local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
 
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
+local mpk = vim.api.nvim_set_keymap
 
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+-- Modes
+--     normal_mode = "n",
+--     insert_mode = "i",
+--     visual_mode = "v",
+--     visual_block_mode = "x",
+--     term_mode = "t",
+--     command_mode = "c",
 
-mpk("n", "<M-t>", ":NvimTreeFocus<CR>", { silent = true })
-
-
-vim.cmd[[
-    tnoremap <Esc> <C-\><C-n>
-]]
+mpk("n", "<M-t>", ":NvimTreeToggle<CR>", opts)
+mpk("n", "<Leader>ff", ":Telescope find_files<CR>", opts)

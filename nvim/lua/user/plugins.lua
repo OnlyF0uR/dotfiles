@@ -31,6 +31,8 @@ end
 
 return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Package manager
+    use "nvim-lua/plenary.nvim" -- Used by gitsigns etc.
+    use "nvim-tree/nvim-web-devicons" -- Used by nvim-tree and lualine
 
     use "nvim-telescope/telescope.nvim" 
 
@@ -44,10 +46,9 @@ return packer.startup(function(use)
 			vim.api.nvim_command "colorscheme catppuccin"
 		end
 	}
-	
-	use { "nvim-lualine/lualine.nvim",
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+
+    use "nvim-tree/nvim-tree.lua"
+    use "nvim-lualine/lualine.nvim"
 
     -- CMP Plugins
     use "hrsh7th/nvim-cmp"
@@ -66,17 +67,8 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"
 
     -- Git
-    use {
-        "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" },
-        config = function() require("gitsigns").setup() end
-    }
-
-    -- Filetree
-    use {
-        "nvim-tree/nvim-tree.lua",
-        requires = { "nvim-tree/nvim-web-devicons" }
-    }
-
+    use "lewis6991/gitsigns.nvim"
+    
     -- Treesitter
     use "nvim-treesitter/nvim-treesitter"
 

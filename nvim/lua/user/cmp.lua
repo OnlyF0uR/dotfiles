@@ -1,12 +1,8 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-    return
-end
+if not cmp_status_ok then return end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
-    return
-end
+if not snip_status_ok then return end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
@@ -128,6 +124,13 @@ cmp.setup {
         ghost_text = false,
         native_menu = false,
     },
+    enabled = function()
+        local in_prompt = vim.api.nvim_buf_get_option(0, 'buftype') == 'prompt'
+        if in_prompt then return false end -- From default config, disable in Telescope prompt
+        
+        local context = require("cmp.config.context")
+        return not(context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment"))
+    end
 }
 
 cmp.setup.cmdline("/", {

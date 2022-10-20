@@ -49,6 +49,8 @@ return packer.startup(function(use)
 
     use "nvim-tree/nvim-tree.lua"
     use "nvim-lualine/lualine.nvim"
+    use "akinsho/toggleterm.nvim"
+    use "lewis6991/impatient.nvim"
 
     -- CMP Plugins
     use "hrsh7th/nvim-cmp"

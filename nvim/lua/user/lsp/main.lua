@@ -1,10 +1,10 @@
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not status_ok then return end
 
-local servers = { "gopls", "rust_analyzer", "eslint", "svelte", "cssls", "pyright", "dockerls", "html" }
+local servers = { "gopls", "rust_analyzer", "eslint", "svelte", "cssls", "pyright", "dockerls", "html", "csharp_ls" }
 if vim.g.os.sysname ~= "Windows_NT" then -- Linux only
     table.insert(servers, "clangd")
-	table.insert(servers, "texlab")
+	--table.insert(servers, "texlab")
 end
 
 lsp_installer.setup({

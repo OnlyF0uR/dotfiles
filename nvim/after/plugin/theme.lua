@@ -1,6 +1,8 @@
 local status_ok, catppuccin = pcall(require, "catppuccin")
 if not status_ok then return end
 
+vim.g.catppuccin_flavour = "macchiato"
+
 catppuccin.setup({
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 	transparent_background = true,
@@ -35,3 +37,5 @@ catppuccin.setup({
 	color_overrides = {},
 	custom_highlights = {},
 })
+
+vim.api.nvim_command "colorscheme catppuccin"

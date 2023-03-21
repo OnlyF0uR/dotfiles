@@ -11,4 +11,9 @@ irm get.scoop.sh | iex
 # Download & Install packages
 scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 scoop install neovim gcc
+
+# Open the powershell shell with oh-my-posh
+pwsh
+# Disable notice
+oh-my-posh disable notice
 ```

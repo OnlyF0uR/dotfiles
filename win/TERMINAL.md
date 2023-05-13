@@ -3,7 +3,7 @@
 ```
 Shell: Powershell 7 - pwsh.exe
 Colour scheme: One Half Dark (Custom)
-Font: FiraCode NFM
+Font: FiraCode NFM (https://www.nerdfonts.com/font-downloads, https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip)
 Font size: 11
 Cursor: vintage (height: 18)
 Background-opacity: 90%

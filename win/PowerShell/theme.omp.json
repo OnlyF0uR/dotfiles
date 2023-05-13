@@ -1,0 +1,69 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+        "pink": "#DA627D",
+        "orange": "#FCA17D",
+        "blue": "#7798dc",
+        "white": "#ffffff",
+        "brown": "#50433e",
+        "green": "#48ab44"
+    },
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "background": "p:blue",
+                    "foreground": "p:white",
+                    "leading_diamond": "\ue0b6",
+                    "style": "diamond",
+                    "template": "four ",
+                    "type": "session"
+                },
+                {
+                    "background": "p:pink",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "folder_icon": "..\ue5fe..",
+                        "home_icon": "~",
+                        "style": "agnoster_short"
+                    },
+                    "style": "powerline",
+                    "template": " {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "background": "p:orange",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "branch_icon": "",
+                        "fetch_stash_count": true,
+                        "fetch_status": false,
+                        "fetch_upstream_icon": true
+                    },
+                    "style": "powerline",
+                    "template": " \u279c ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+                    "type": "git"
+                },
+                {
+                    "background": "p:brown",
+                    "foreground": "p:green",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "properties": {
+                        "fetch_package_manager": true,
+                        "npm_icon": " <#cc3a3a>\ue5fa</> ",
+                        "yarn_icon": " <#348cba>\uf61a</>"
+                    },
+                    "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+                    "type": "node"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 2
+}

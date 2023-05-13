@@ -1,7 +1,7 @@
 ```powershell
 # Create $env:USERPROFILE\Documents\PowerShell and install the file from this repository
 
-# Install [font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip) >> FiraCodeNerdFont-Medium.ttf
+# Download https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip >> install FiraCodeNerdFont-Medium.ttf
 
 # Get scoop
 irm get.scoop.sh | iex

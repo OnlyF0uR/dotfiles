@@ -1,9 +1,7 @@
 ```powershell
-# Make sure the user_profile will be processed (Don't do this if you already have the PowerShell_profile), also you might need to create the directories manually.
-echo ". $env:USERPROFILE\.config\powershell\user_profile.ps1" > $env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+# Create $env:USERPROFILE\Documents\PowerShell and install the file from this repository
 
-# Install font required by oh-my-posh (Just double click it and install)
-iwr -useb  https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -OutFile "MesloLGS NF Regular.ttf"
+# Install [font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip) >> FiraCodeNerdFont-Medium.ttf
 
 # Get scoop
 irm get.scoop.sh | iex

@@ -13,7 +13,7 @@ Background-opacity: 90%
 ### One Half Dark (Custom)
 ```json
 {
-    "background": "#24273A",
+    "background": "#101414",
     "black": "#282C34",
     "blue": "#61AFEF",
     "brightBlack": "#5A6374",

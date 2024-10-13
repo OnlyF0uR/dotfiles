@@ -1,0 +1,38 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "auto_update": false,
+  "ui_font_size": 16,
+  "buffer_font_size": 20,
+  "buffer_line_height": {
+    "custom": 1.5
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Horus"
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "cargo": {
+          "features": "all"
+        },
+        "check": {
+          "features": "all",
+          "overrideCommand": ["cargo", "clippy", "--message-format=json"]
+        }
+      }
+    }
+  }
+}

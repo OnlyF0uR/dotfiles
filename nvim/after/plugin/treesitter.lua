@@ -1,8 +1,9 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "javascript", "typescript", "go" },
+  -- ensure_installed = { "c", "lua", "javascript", "typescript", "go", "python" },
+  ensure_installed = { "lua", "rust", "toml", "python" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+  sync_install = true,
 
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally

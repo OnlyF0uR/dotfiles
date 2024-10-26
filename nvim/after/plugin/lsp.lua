@@ -1,6 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = { "gopls", "rust_analyzer", "eslint", "tsserver", "pyright", "clangd" },
+  -- ensure_installed = { "gopls", "rust_analyzer", "eslint", "tsserver", "pyright", "clangd" },
+  ensure_installed = { "rust_analyzer", "pyright" },
 }
 
 require("mason-lspconfig").setup_handlers {
@@ -15,4 +16,6 @@ require("mason-lspconfig").setup_handlers {
   -- ["rust_analyzer"] = function ()
   --     require("rust-tools").setup {}
   -- end
+
+  ['rust_analyzer'] = function() end
 }

@@ -1,4 +1,4 @@
-# General settings
+# Windows Terminal Settings
 
 ```
 Shell: Powershell 7 - pwsh.exe

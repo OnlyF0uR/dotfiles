@@ -3,7 +3,7 @@
 ```
 Shell: Powershell 7 - pwsh.exe
 ```
-For PowerShell 7 add ``"commandline": "pwsh.exe -NoLogo"`` where source says Windows.Terminal.PowershellCore, to remove the version prompt when opening a new window.
+For PowerShell 7 add ``"commandline": "pwsh.exe -NoLogo"`` where source says ``Windows.Terminal.PowershellCore``, to remove the version prompt when opening a new window.
 
 ```
 Font: FiraCode NFM (https://www.nerdfonts.com/font-downloads, https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip)

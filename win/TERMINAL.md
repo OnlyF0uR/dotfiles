@@ -48,9 +48,12 @@ profiles->defaults:
 ```json
 {
     "colorScheme": "One Half Darker",
+    "cursorHeight": 18,
+    "cursorShape": "vintage",
     "font": 
     {
-        "face": "FiraCode NFM"
+        "face": "FiraCode NFM",
+        "size": 11
     },
     "opacity": 65,
     "padding": "8",
